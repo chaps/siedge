@@ -1,2 +1,2 @@
 angular
-    .module("siedgeModule", ['ngMaterial', 'ui.bootstrap']);q
+    .module("siedgeModule", ['ngMaterial', 'ui.bootstrap']);
