@@ -16,6 +16,8 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
         rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Raleway" 
@@ -29,6 +31,9 @@
 
     <!-- Siedge CSS -->
     <link href="css/siedge.css" rel="stylesheet">
+
+    <!-- carousel CSS -->
+    <link href="css/multiitem-carousel.css" rel="stylesheet">
 
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
@@ -222,32 +227,48 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Lean</h3>
-                        <p class="text-muted"></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted"></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted"></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted"></p>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="carousel slide multi-item-carousel" id="theCarousel">
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <div class="col-xs-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                                    <h3>Lean</h3>
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="col-xs-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                                    <h3>Ready to Ship</h3>
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="col-xs-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                                    <h3>Up to Date</h3>
+                                    <p class="text-muted"></p>
+                                </div>
+                                </div>
+                          </div>
+                          <div class="item">
+                            <div class="col-xs-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                                    <h3>Made with Love</h3>
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -322,6 +343,9 @@
 
     <!-- Siedge Angular -->
     <script src="app/siedge.js"></script>
+
+    <!-- Carousel JS -->
+    <script src="js/multi-item-carousel.js"></script>
 
 </body>
 
