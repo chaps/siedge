@@ -14,9 +14,6 @@
     width: 100%;
 }
 
-#about {
-    background-image: url('../img/logo_solo.png');
-    display: block;
-    margin: auto;
-    width: 30%;
+.about {
+    padding: 20px;
 }
