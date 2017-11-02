@@ -122,9 +122,14 @@
 
     <section class="no-padding" id="services">
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+            <!--
+                popup-gallery
+            -->
+            <div class="row no-gutter ">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" div="gal1">
+                    
+                    <a href="#gal1" class="portfolio-box">
+                    
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -136,10 +141,14 @@
                                 </div>
                             </div>
                         </div>
+                    
                     </a>
+                    
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal2">
+                    
+                    <a href="#gal2" class="portfolio-box">
+                    
                         <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -151,10 +160,12 @@
                                 </div>
                             </div>
                         </div>
+                    
                     </a>
+                    
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal3">
+                    <a href="#gal3" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -168,8 +179,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal4">
+                    <a href="#gal4" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -183,8 +194,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal5">
+                    <a href="#gal5" class="portfolio-box">
+                    
                         <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -196,10 +208,14 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </a>
+                
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal6">
+                    
+                    <a href="#gal6" class="portfolio-box">
+                    
                         <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -211,7 +227,9 @@
                                 </div>
                             </div>
                         </div>
+                    
                     </a>
+                    
                 </div>
             </div>
         </div>
@@ -314,6 +332,52 @@
             </div>
         </div>
     </section>
+
+    <h2>Large Modal</h2>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button>
+
+
+    <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg" >
+            <!--
+          <div class="modal-content" 
+      -->
+          
+          >
+          <!--style="background-image: url('img/portfolio/thumbnails/1.jpg'); background-size: 100% 100%;"-->
+          <!--
+            <img src="img/portfolio/thumbnails/1.jpg" width="100%"  style="position:absolute;">
+            
+            opacity: 0.80;
+        -->
+            
+            <div class="modal-content"   style="
+             
+             box-shadow: none;
+            background-image: url('img/portfolio/thumbnails/1.jpg');
+            background-size: 100%, 100%;
+             
+            ">
+            <div class="modal-content"   style="
+             
+             background-color: rgba(0,0,0,0.5); 
+             
+            ">
+                <div class="modal-header" style="border: 0px;">
+                    <!--
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    -->
+                  <h4 class="modal-title" style="text-align: right; color: white;">Modal Header</h4>
+                </div>
+                <div class="modal-body" style="color: rgb(255,255,255); text-align: justify; padding-left: 20%; padding-right: 20%;">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque quis est semper consectetur. Sed et purus et dui faucibus posuere. Integer tempor pharetra enim sit amet dapibus. Ut sagittis dui pharetra libero rutrum facilisis. Duis dictum massa leo, ac auctor ex tincidunt eget.</p>
+                </div>
+          </div>
+          </div>
+        </div>
+      </div>
 
 
     <!-- jQuery -->
