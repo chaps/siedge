@@ -122,12 +122,12 @@
 
     <section class="no-padding" id="services">
         <div class="container-fluid">
-            <!--
-                popup-gallery
-            -->
             <div class="row no-gutter ">
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" div="gal1">
-                    
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/1.jpg"
+                    data-text="This Data Text 1"
+                    div="gal1" onclick="raise_modal(this)"
+                >
                     <a href="#gal1" class="portfolio-box">
                     
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
@@ -141,12 +141,14 @@
                                 </div>
                             </div>
                         </div>
-                    
                     </a>
-                    
                 </div>
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal2">
-                    
+                
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/2.jpg"
+                    data-text="This Data Text 2"
+                    id="gal2" onclick="raise_modal(this)"
+                >
                     <a href="#gal2" class="portfolio-box">
                     
                         <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
@@ -160,11 +162,14 @@
                                 </div>
                             </div>
                         </div>
-                    
                     </a>
-                    
                 </div>
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal3">
+                
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/3.jpg"
+                    data-text="This Data Text 3"
+                    id="gal3" onclick="raise_modal(this)"
+                >
                     <a href="#gal3" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -179,7 +184,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal4">
+                
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/4.jpg"
+                    data-text="This Data Text 4"
+                    id="gal4" onclick="raise_modal(this)"
+                >
                     <a href="#gal4" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -194,7 +204,13 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal5">
+                
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/5.jpg"
+                    data-text="This Data Text 5"
+                    
+                    id="gal5" onclick="raise_modal(this)"
+                >
                     <a href="#gal5" class="portfolio-box">
                     
                         <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
@@ -208,12 +224,14 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </a>
-                
                 </div>
-                <div class="col-lg-4 col-sm-6" data-toggle="modal" data-target="#myModal" id="gal6">
-                    
+                
+                <div class="col-lg-4 col-sm-6" 
+                    data-img="img/portfolio/thumbnails/6.jpg"
+                    data-text="This Data Text 6"
+                    id="gal6" onclick="raise_modal(this)"
+                >
                     <a href="#gal6" class="portfolio-box">
                     
                         <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
@@ -227,9 +245,7 @@
                                 </div>
                             </div>
                         </div>
-                    
                     </a>
-                    
                 </div>
             </div>
         </div>
@@ -246,14 +262,15 @@
         </div>
         <div class="container">
             <div class="row">
-                  <div class="row">
+
+
                     <div class="col-md-12">
                       <div class="carousel slide multi-item-carousel" id="theCarousel">
                         <div class="carousel-inner">
                           <div class="item active">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                                    <i class="fa fa-4x fa-diamond text-primary"></i>
                                     <h3>Lean</h3>
                                     <p class="text-muted"></p>
                                 </div>
@@ -262,7 +279,7 @@
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                                    <i class="fa fa-4x fa-paper-plane text-primary"></i>
                                     <h3>Ready to Ship</h3>
                                     <p class="text-muted"></p>
                                 </div>
@@ -271,7 +288,7 @@
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                                    <i class="fa fa-4x fa-newspaper-o text-primary"></i>
                                     <h3>Up to Date</h3>
                                     <p class="text-muted"></p>
                                 </div>
@@ -280,7 +297,7 @@
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                                    <i class="fa fa-4x fa-heart text-primary"></i>
                                     <h3>Made with Love</h3>
                                     <p class="text-muted"></p>
                                 </div>
@@ -290,7 +307,7 @@
                       </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
 
@@ -333,51 +350,22 @@
         </div>
     </section>
 
-    <h2>Large Modal</h2>
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button>
-
-
+    
     <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog modal-lg" >
-            <!--
-          <div class="modal-content" 
-      -->
-          
-          >
-          <!--style="background-image: url('img/portfolio/thumbnails/1.jpg'); background-size: 100% 100%;"-->
-          <!--
-            <img src="img/portfolio/thumbnails/1.jpg" width="100%"  style="position:absolute;">
-            
-            opacity: 0.80;
-        -->
-            
-            <div class="modal-content"   style="
-             
-             box-shadow: none;
-            background-image: url('img/portfolio/thumbnails/1.jpg');
-            background-size: 100%, 100%;
-             
-            ">
-            <div class="modal-content"   style="
-             
-             background-color: rgba(0,0,0,0.5); 
-             
-            ">
-                <div class="modal-header" style="border: 0px;">
-                    <!--
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    -->
-                  <h4 class="modal-title" style="text-align: right; color: white;">Modal Header</h4>
+            <div class="modal-content" id="modalImagesContent" >
+                <div  id="modalImagenes">
+                    <div class="modal-header" style="border: 0px;">
+                        <h4 id="modalImagesTitle" class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="modalImagesBody">
+                        <p id="modalImagesBodyP"></p>
+                    </div>
                 </div>
-                <div class="modal-body" style="color: rgb(255,255,255); text-align: justify; padding-left: 20%; padding-right: 20%;">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque quis est semper consectetur. Sed et purus et dui faucibus posuere. Integer tempor pharetra enim sit amet dapibus. Ut sagittis dui pharetra libero rutrum facilisis. Duis dictum massa leo, ac auctor ex tincidunt eget.</p>
-                </div>
-          </div>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
 
 
     <!-- jQuery -->
@@ -411,6 +399,19 @@
 
     <!-- Carousel JS -->
     <script src="js/multi-item-carousel.js"></script>
+
+    <script type="text/javascript">
+        function raise_modal(obj){
+            img_url = obj.getAttribute("data-img");
+            text = obj.getAttribute("data-text");
+            var modal = $("#myModal")
+            $("#modalImagesBodyP").html(text);
+            $("#modalImagesContent").css("background-image", "url('/"+img_url+"')");
+            $("#modalImagesContent").css("height", window.innerHeight);
+            //$("#modalImagesContent").css("background-size", "100% 100%");
+            modal.modal("show");
+        }        
+    </script>
 
 </body>
 
