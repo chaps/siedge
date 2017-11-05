@@ -486,9 +486,9 @@
 
     <script type="text/javascript">
         function raise_modal(obj){
-            img_url = obj.getAttribute("data-img");
-            text = obj.getAttribute("data-text");
-            title =  obj.getAttribute("data-title");
+            var img_url = obj.getAttribute("data-img");
+            var text = obj.getAttribute("data-text");
+            var title =  obj.getAttribute("data-title");
             var modal = $("#myModal")
             $("#modalImagesTitle").html(title);
             $("#modalImagesBodyP").html(text);
