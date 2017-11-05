@@ -16,6 +16,7 @@
 
 .about {
     padding: 20px;
+    width: 30%;
 }
 
 .modal-backdrop.in {
@@ -41,4 +42,12 @@
 	text-align: justify;
 	padding-left: 20%;
 	padding-right: 20%;
+}
+
+.bg-footer {
+    background: #3D6BAD;
+}
+
+#customers {
+    height: auto;
 }
