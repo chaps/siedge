@@ -9,7 +9,8 @@
 }
 
 .fill {
-    height: 10px;
+    display: inline-block;
+    height: 60px;
 }
 .full-white {
     color: #000000 ;
@@ -18,8 +19,8 @@
 }
 
 .about {
-    padding: 20px;
-    width: 25%;
+    padding-top: 20px;
+    width: 20%;
 }
 
 .modal-backdrop.in {
@@ -48,9 +49,14 @@
 }
 
 .bg-footer {
-    background: #3D6BAD;
+    color: white;
+    background: #060b3b;
 }
 
 #customers {
     height: auto;
+}
+
+.modal-text {
+    display: none;
 }
