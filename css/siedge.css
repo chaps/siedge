@@ -22,6 +22,31 @@
     width: 25%;
 }
 
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+
+#modalImagesContent {
+	background-size: 100% 100%;
+}
+
+#modalImagenes{
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 100%;
+}
+
+#modalImagesTitle{
+	text-align: right;
+	color: White;
+}
+
+#modalImagesBody{
+	color: rgb(255, 255, 255);
+	text-align: justify;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
 .bg-footer {
     background: #3D6BAD;
 }
