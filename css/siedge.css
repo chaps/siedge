@@ -8,6 +8,9 @@
     padding-bottom: 15px;
 }
 
+.fill {
+    height: 10px;
+}
 .full-white {
     color: #000000 ;
     background-color: #ffffff;
@@ -16,7 +19,7 @@
 
 .about {
     padding: 20px;
-    width: 30%;
+    width: 25%;
 }
 
 .bg-footer {

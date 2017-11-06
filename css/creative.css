@@ -162,12 +162,12 @@ header {
 header .header-content {
   position: relative;
   text-align: center;
-  padding: 200px 50px 200px;
+  padding: 200px;
   width: 100%;
   background-image:
     linear-gradient(
-      rgba(61, 107, 173, 0.4),
-      rgba(61, 107, 173, 0.4)
+      rgba(61, 107, 173, 0.8),
+      rgba(61, 107, 173, 0.8)
     );
 }
 header .header-content .header-content-inner h1 {
