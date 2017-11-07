@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="siedgeApp">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,9 +34,6 @@
     <!-- carousel CSS -->
     <link href="css/multiitem-carousel.css" rel="stylesheet">
 
-    <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,7 +44,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-controller="siedgeController">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -73,7 +69,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Inteligencia en Ingenieria</a>
+                        <a class="page-scroll" href="#about">{{ 'ABOUT' | translate }}</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Servicios</a>
@@ -83,6 +79,14 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contacto</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ 'LANG' | translate }}
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" ng-click="changeLanguage('es')">{{ 'LANG1' | translate }}</a></li>
+                            <li><a href="" ng-click="changeLanguage('en')">{{ 'LANG2' | translate}}</a></li>
+                        </ul>
                     </li>
                     <li>
                     </li>
@@ -427,27 +431,21 @@
     <!-- Angular UI -->
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
 
-    <!-- Siedge Angular -->
+    <!-- Siedge JS -->
+    <script src="js/siedge.js"></script>
     <script src="app/siedge.js"></script>
 
     <!-- Carousel JS -->
     <script src="js/multi-item-carousel.js"></script>
 
-    <script type="text/javascript">
-        function raise_modal(obj){
-            var img_url = obj.getAttribute("data-img");
-            var text = obj.getAttribute("data-text");
-            var title =  obj.getAttribute("data-title");
-            var modal = $("#myModal")
-            $("#modalImagesTitle").html(title);
-            $("#modalImagesBodyP").html(text);
-            $("#modalImagesContent").css("background-image", "url('/"+img_url+"')");
-            $("#modalImagesContent").css("height", window.innerHeight);
-            //$("#modalImagesContent").css("background-size", "100% 100%");
-            modal.modal("show");
-        }
-    </script>
-
+    <!-- Angular Translate -->
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.16.0/angular-translate.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-interpolation-messageformat/2.16.0/angular-translate-interpolation-messageformat.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-cookie/2.16.0/angular-translate-storage-cookie.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-local/2.16.0/angular-translate-storage-local.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-url/2.16.0/angular-translate-loader-url.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.16.0/angular-translate-loader-static-files.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.16.0/angular-translate-handler-log.js"></script>
 </body>
 
 </html>
