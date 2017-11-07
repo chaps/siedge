@@ -166,8 +166,8 @@ header .header-content {
   width: 100%;
   background-image:
     linear-gradient(
-      rgba(61, 107, 173, 0.8),
-      rgba(61, 107, 173, 0.8)
+      rgba(55, 101, 168, 0.8),
+      rgba(55, 101, 168, 0.8)
     );
 }
 header .header-content .header-content-inner h1 {
@@ -182,7 +182,7 @@ header .header-content .header-content-inner hr {
 }
 header .header-content .header-content-inner p {
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   font-size: 16px;
   margin-bottom: 50px;
 }

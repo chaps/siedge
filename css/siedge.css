@@ -49,8 +49,13 @@
 }
 
 .bg-footer {
+    color: black;
+    background: white;
+}
+
+.opensans {
+    font-family: "Open Sans";
     color: white;
-    background: #060b3b;
 }
 
 #customers {
