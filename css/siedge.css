@@ -8,6 +8,10 @@
     padding-bottom: 15px;
 }
 
+.fill {
+    display: inline-block;
+    height: 60px;
+}
 .full-white {
     color: #000000 ;
     background-color: #ffffff;
@@ -15,5 +19,49 @@
 }
 
 .about {
-    padding: 20px;
+    padding-top: 20px;
+    width: 20%;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+
+#modalImagesContent {
+	background-size: 100% 100%;
+}
+
+#modalImagenes{
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 100%;
+}
+
+#modalImagesTitle{
+	text-align: right;
+	color: White;
+}
+
+#modalImagesBody{
+	color: rgb(255, 255, 255);
+	text-align: justify;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.bg-footer {
+    color: black;
+    background: white;
+}
+
+.opensans {
+    font-family: "Open Sans";
+    color: white;
+}
+
+#customers {
+    height: auto;
+}
+
+.modal-text {
+    display: none;
 }

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="siedgeApp">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +19,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
         rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" 
+    <link href="https://fonts.googleapis.com/css?family=Raleway"
         rel='stylesheet' type='text/css'>
-        
+
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
@@ -35,9 +34,6 @@
     <!-- carousel CSS -->
     <link href="css/multiitem-carousel.css" rel="stylesheet">
 
-    <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,9 +44,18 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-controller="siedgeController">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.10';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -64,16 +69,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Inteligencia en Ingenieria</a>
+                        <a class="page-scroll" href="#about">{{ 'ABOUT' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Servicios</a>
+                        <a class="page-scroll" href="#services">{{ 'SERVICES' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#customers">Clientes</a>
+                        <a class="page-scroll" href="#customers">{{ 'CUSTOMERS' | translate }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contacto</a>
+                        <a class="page-scroll" href="#contact">{{ 'CONTACT' | translate }}</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ 'LANG' | translate }}
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" ng-click="changeLanguage('es')">{{ 'LANG1' | translate }}</a></li>
+                            <li><a href="" ng-click="changeLanguage('en')">{{ 'LANG2' | translate}}</a></li>
+                        </ul>
                     </li>
                     <li>
                     </li>
@@ -87,11 +100,9 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Asistencia cuando se necesita</h1>
+                <h1 id="homeHeading">{{ 'HEADING' | translate }}</h1>
                 <hr>
-                <p>Siedge se especializa en dar soporte a las áreas operativas bajo demanda para proyectos especiales, transformación
-                    y desarrollo y cobertura en recursos de Ingeniería.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Mas</a>
+                <p class="opensans">{{ 'OPENING' | translate }}</p>
             </div>
         </div>
     </header>
@@ -100,21 +111,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Inteligencia en Ingenieria</h2>
+                    <h2 class="section-heading">{{ 'ABOUT' | translate }}</h2>
+                    <!-- <img class="about" src="../img/logo_solo.png"> -->
                     <hr class="light">
-                    <img class="about" src="../img/logo_solo.png">
-                    <p>Proveemos un servicio único de Inteligencia en Ingeniería para asistir a empresas a dar saltos de innovación
-                        y desarrollo, ayudar con carga de trabajo en áreas requeridas de atención
-                    </p>
-                    <p>Nos especializamos en Servicios Innovadores de Ingeniería, introducción de nuevos productos o clientes,
-                        soluciones de manufactura, transformación cultural, desarrollo organizacional, diseño e implementacion
-                        de lineas de manufactura y mejora continua.
-                    </p>
-                    <p> Proveemos soporte en áreas específicas por tiempos específicos sin necesidad de contratar y desarrollar
-                        personal propio, poniendo a su servicio más de 60 años de experiencia acumulada en compañías internacionales
-                        líderes en manufactura
-                    </p>
-                    <a href="#contact" class="page-scroll btn btn-default btn-xl sr-button">Contactenos</a>
+                    <p>{{ 'PITCH1' | translate }}</p>
+                    <p>{{ 'PITCH2' | translate }}</p>
+                    <p> {{ 'PITCH3' | translate }}</p>
                 </div>
             </div>
         </div>
@@ -122,92 +124,101 @@
 
     <section class="no-padding" id="services">
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+            <div class="row no-gutter ">
+                <div class="col-lg-4 col-sm-6"
+                     data-img="img/portfolio/thumbnails/1.jpg"
+                     data-title="{{ 'SERVICE1' | translate }}"
+                     data-text="{{ 'SERVICET1' | translate }}"
+                     div="gal1" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
-                                <div class="project-name">
-                                    Nombre del Proyecto
-                                </div>
+                                <div class="project-name">{{ 'SERVICE1' | translate }}</div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+
+                <div class="col-lg-4 col-sm-6"
+                    data-img="img/portfolio/thumbnails/2.jpg"
+                    data-title="{{ 'SERVICE2' | translate }}"
+                     data-text="{{ 'SERVICET2' | translate }}"
+                     id="gal2" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
                                 <div class="project-name">
-                                    Nombre del Proyecto
+                                    {{ 'SERVICE2' | translate }}
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+
+                <div class="col-lg-4 col-sm-6"
+                    data-img="img/portfolio/thumbnails/3.jpg"
+                     data-title="{{ 'SERVICE3' | translate }}"
+                     data-text="{{ 'SERVICET3' | translate }}"
+                    id="gal3" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
                                 <div class="project-name">
-                                    Nombre del Proyecto
+                                    {{ 'SERVICE3' | translate }}
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+
+                <div class="col-lg-4 col-sm-6"
+                    data-img="img/portfolio/thumbnails/4.jpg"
+                    data-text="{{ 'SERVICE4' | translate }}"
+                    data-title="{{ 'SERVICET4' | translate }}"
+                    id="gal4" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
                                 <div class="project-name">
-                                    Nombre del Proyecto
+                                    {{ 'SERVICE4' | translate }}
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+
+                <div class="col-lg-4 col-sm-6"
+                    data-img="img/portfolio/thumbnails/5.jpg"
+                    data-text="{{ 'SERVICE5' | translate }}"
+                    data-title="{{ 'SERVICET5' | translate }}"
+                    id="gal5" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
                                 <div class="project-name">
-                                    Nombre del Proyecto
+                                    {{ 'SERVICE5' | translate }}
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+
+                <div class="col-lg-4 col-sm-6"
+                    data-img="img/portfolio/thumbnails/6.jpg"
+                    data-text="{{ 'SERVICE6' | translate }}"
+                    data-title="{{ 'SERVICET6' | translate }}"
+                    id="gal6" onclick="raise_modal(this)">
+                    <a href="" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Categoria
-                                </div>
                                 <div class="project-name">
-                                    Nombre del Proyecto
+                                    {{ 'SERVICE6' | translate }}
                                 </div>
                             </div>
                         </div>
@@ -221,22 +232,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Propuesta Tecnologica</h2>
+                    <h2 class="section-heading">{{ 'CUSTOMERS' | translate }}</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                  <div class="row">
                     <div class="col-md-12">
                       <div class="carousel slide multi-item-carousel" id="theCarousel">
                         <div class="carousel-inner">
                           <div class="item active">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                                    <h3>Lean</h3>
+                                    <img src="img/clients/interlatin.png">
                                     <p class="text-muted"></p>
                                 </div>
                             </div>
@@ -244,17 +253,31 @@
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                                    <h3>Ready to Ship</h3>
+                                    <img src="img/clients/sunu.png">
                                     <p class="text-muted"></p>
                                 </div>
                             </div>
                           </div>
+                            <div class="item">
+                                <div class="col-xs-4 text-center">
+                                    <div class="service-box">
+                                        <img src="img/clients/keymanteck.jpg">
+                                        <p class="text-muted"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4 text-center">
+                                    <div class="service-box">
+                                        <img src="img/clients/plexus.png">
+                                        <p class="text-muted"></p>
+                                    </div>
+                                </div>
+                            </div>
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                                    <h3>Up to Date</h3>
+                                    <img src="img/clients/sinec.png">
                                     <p class="text-muted"></p>
                                 </div>
                                 </div>
@@ -262,8 +285,7 @@
                           <div class="item">
                             <div class="col-xs-4 text-center">
                                 <div class="service-box">
-                                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                                    <h3>Made with Love</h3>
+                                    <img src="img/clients/hplast.png">
                                     <p class="text-muted"></p>
                                 </div>
                             </div>
@@ -272,23 +294,22 @@
                       </div>
                     </div>
                 </div>
-            </div>
+
         </div>
     </section>
 
-    <section id="contact" class="bg-dark">
-        <div class="container full-white">
+    <section id="contact" class="bg-footer">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contactenos</h2>
+                    <h2 class="section-heading">{{ 'CONTACTUS' | translate }}</h2>
                     <hr class="primary">
-                    <p>Solicite su evaluacion inicial</p>
                 </div>
             </div>
             <div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
+                    <p>(+521) 333-954-2392</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
@@ -299,21 +320,38 @@
         <div class="container">
             <div class="column">
                 <div class="col-lg-4 col-lg-offset-2 text-center">
-                    Facebook
+                    <div class="fb-like" data-href="https://fb.me/SiedgeEngineering" data-layout="button"
+                         data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                    </div>
                 </div>
             </div>
             <div class="column">
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    Twitter
-                </div>
-            </div>
-            <div class="column">
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    Linkedin
+                <div class="col-lg-4 text-center">
+                    <div class="social-connector">
+                        <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                        <script type="IN/FollowCompany" data-id="10388477"></script>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content" id="modalImagesContent" >
+                <div  id="modalImagenes">
+                    <div class="modal-header" style="border: 0px;">
+                        <h4 id="modalImagesTitle" class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="modalImagesBody">
+                        <p id="modalImagesBodyP"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- jQuery -->
@@ -342,12 +380,21 @@
     <!-- Angular UI -->
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
 
-    <!-- Siedge Angular -->
+    <!-- Siedge JS -->
+    <script src="js/siedge.js"></script>
     <script src="app/siedge.js"></script>
 
     <!-- Carousel JS -->
     <script src="js/multi-item-carousel.js"></script>
 
+    <!-- Angular Translate -->
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.16.0/angular-translate.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-interpolation-messageformat/2.16.0/angular-translate-interpolation-messageformat.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-cookie/2.16.0/angular-translate-storage-cookie.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-local/2.16.0/angular-translate-storage-local.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-url/2.16.0/angular-translate-loader-url.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.16.0/angular-translate-loader-static-files.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.16.0/angular-translate-handler-log.js"></script>
 </body>
 
 </html>
