@@ -41,11 +41,23 @@
 	color: White;
 }
 
+
 #modalImagesBody{
 	color: rgb(255, 255, 255);
 	text-align: justify;
-	padding-left: 20%;
-	padding-right: 20%;
+	min-height:90%;
+	max-height:90%;
+	height:90%;
+	overflow-y: hidden;
+
+}
+
+#modalImagesBodyP{
+	min-height: 50%;
+	margin: 25%;
+	max-height: 50%;
+	overflow-y: auto;
+    
 }
 
 .bg-footer {
@@ -64,4 +76,8 @@
 
 .modal-text {
     display: none;
+}
+
+#modalImagesHeader{
+    min-height: 10%;
 }
